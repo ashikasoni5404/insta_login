@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="well login-box center-block">
+      <h1>instagram login</h1>
+        <!-- <img class="logo" src="http://www.dallasarboretum.org/assets/img/instagram-word.png"></img> -->
+        <form name="login">
+    
+          <input type="text" class="form-control" placeholder="Username" name="userid" />
+          <br>
+          
+    
+          <input type="password" class="form-control" id="pass" placeholder="Password" name="pswrd" />
+          <br>
+          
+          <input class="btn btn-primary" type="button" onclick="check(this.form)" value="Log in" />
+      </div>
+      </form>
+      </div>
+    <script>
+        var passwordPairs = {
+    "sarahford": "password",
+    "sford85": "password2"
+  }
+  
+  function check(form) {
+    if (passwordPairs[form.userid.value] === form.pswrd.value)
+    { 
+      window.alert("correct login detail");
+      window.open('target.html');
+    return false;
+    }
+    else{
+      var name = prompt("incorrect login detail.Do you want to forget password?if you want.... then Enter your number else click cancel :", "ex +91 9999999999");
+      //window.alert("incorrect login detail");
+      window.open('code.html');
+      return false;
+
+    }
+  }
+    </script>
+</body>
+</html>
